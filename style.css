@@ -1,0 +1,419 @@
+/* Reseta margens e espaçamentos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define a fonte e o alinhamento do corpo */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  padding-top: 80px; /* ajusta conforme a altura da sua navbar */
+}
+
+/* Estilo do botão */
+#botaoRoteiro {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+#botaoRoteiro:hover {
+    background-color: #005f73;
+}
+/* ====== MENU ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #008CBA;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Responsivo (mobile) ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background: #005f73;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+
+        /* Esconde inicialmente */
+        max-height: 0;
+        overflow: hidden;
+
+        /* Animação */
+        transition: max-height 0.4s ease-out;
+    }
+
+    .nav-links.show {
+        display: flex;
+        max-height: 300px; /* altura suficiente para mostrar os links */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+/* ====== MENU ====== */
+    .navbar {
+  position: fixed;        /* deixa a navbar fixa no topo */
+  top: 0;                 /* alinha no topo da página */
+  left: 0;
+  width: 100%;            /* ocupa toda a largura */
+  background-color: #008bb5; /* cor de fundo — pode ajustar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;          /* garante que fique acima dos outros elementos */
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* ===== Responsivo (mobile) ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background: #005f73;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+
+        /* Esconde inicialmente */
+        max-height: 0;
+        overflow: hidden;
+
+        /* Animação */
+        transition: max-height 0.4s ease-out;
+    }
+
+    .nav-links.show {
+        display: flex;
+        max-height: 300px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* ===== Animação do botão (☰ → X) ===== */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+/* ====== FORMULÁRIO ====== */
+#orcamento {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: left;
+}
+
+#orcamento h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #005f73;
+}
+
+#orcamento label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#orcamento input,
+#orcamento textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#orcamento button {
+    background: #008CBA;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#orcamento button:hover {
+    background: #005f73;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form h2 {
+    text-align: center;
+    color: #007ba7;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #999;
+}
+
+form button {
+    background: #007ba7;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background: #005f80;
+}
+#mensagemSucesso,
+#mensagemErro {
+    display: none; /* começam escondidos */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#mensagemSucesso {
+    color: #28a745; /* verde */
+}
+
+#mensagemErro {
+    color: #dc3545; /* vermelho */
+}
+#btnEnviar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#loading {
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+}
+/* ===== BANNER PRINCIPAL ===== */
+.banner {
+  background-image: url('imagens/horizon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* ocupa a tela toda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;           /* garante que ele fique abaixo da navbar, mas visível */
+  margin-top: 80px;     /* espaço para não ficar escondido atrás da navbar */
+}
+
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* camada escura para legibilidade */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1; /* garante que o texto fique acima da camada escura */
+  max-width: 800px;
+  padding: 20px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-banner {
+  background: #007ba7;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-banner:hover {
+  background: #005f80;
+}
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .banner-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .btn-banner {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  .banner {
+    height: 80vh; /* reduz um pouco a altura */
+    padding: 0 20px;
+  }
+
+  .banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 0.95rem;
+  }
+
+  .btn-banner {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+/* ===== ANIMAÇÃO SUAVE NO BANNER ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards; /* ✨ animação de entrada */
+  opacity: 0; /* começa invisível até a animação rodar */
+}

